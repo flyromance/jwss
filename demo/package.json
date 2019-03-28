@@ -1,0 +1,25 @@
+{
+  "name": "demo",
+  "version": "0.0.1",
+  "description": "Build with jws",
+  "main": "index.js",
+  "author": "fanlong",
+  "license": "MIT",
+  "dependencies": {
+    "@jwss/server": "next",
+    "react": "16.x",
+    "react-dom": "16.x",
+    "react-loadable": "^5.3.1",
+    "react-router-dom": "^4.2.2",
+    "antd": "^3.2.0"
+  },
+  "scripts": {
+    "start": "jws start",
+    "build": "jws build",
+    "debug": "jws start --inspect",
+    "dev": "jws start --build --watch"
+  },
+  "keywords": [
+    "jws"
+  ]
+}
