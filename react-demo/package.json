@@ -1,0 +1,32 @@
+{
+  "name": "react-demo",
+  "version": "0.0.1",
+  "description": "Build with jws",
+  "main": "index.js",
+  "author": "fanlong",
+  "license": "MIT",
+  "dependencies": {
+    "react": "16.x",
+    "react-dom": "16.x",
+    "react-loadable": "^5.3.1",
+    "react-router-dom": "^4.2.2",
+    "antd": "^3.2.0",
+    "mobx": "^5.0.3",
+    "mobx-react": "^5.2.3",
+    "redux": "^4.0.0",
+    "react-redux": "^6.0.0",
+    "redux-saga": "^0.16.0",
+    "react-router-redux": "^4.0.0",
+    "axios": "^0.18.0"
+  },
+  "devDependencies": {
+    "@jwss/build": "~0.0.1"
+  },
+  "scripts": {
+    "dev": "jwss-build --dev",
+    "build": "jwss --build"
+  },
+  "keywords": [
+    "jws"
+  ]
+}

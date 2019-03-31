@@ -7,9 +7,24 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "new project",
+      "name": "new react demo",
       "program": "${workspaceFolder}/packages/cli/bin/index.js",
-      "args": ["new", "--name", "demo", "--type=react"]
+      "args": ["new", "--name", "react-demo", "--lib=react"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "new vue demo",
+      "program": "${workspaceFolder}/packages/template/bin/index.js",
+      "args": ["--name=vue-demo", "--lib=vue"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "dev vue demo",
+      "cwd": "${workspaceFolder}/vue-demo",
+      "program": "${workspaceFolder}/packages/build/bin/index.js",
+      "args": ["--dev", "--lib=vue"]
     }
   ]
 }

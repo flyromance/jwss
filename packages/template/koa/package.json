@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "@jwss/server": "~0.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev": "jws-server --dev",
+    "start": "jws-server",
+    "prod": "./node_modules/.bin/pm2 pm2.json --no-daemon"
+  }
+}

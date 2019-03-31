@@ -6,18 +6,26 @@
   "author": "#{user}",
   "license": "MIT",
   "dependencies": {
-    "@jwss/server": "next",
     "react": "16.x",
     "react-dom": "16.x",
     "react-loadable": "^5.3.1",
     "react-router-dom": "^4.2.2",
-    "antd": "^3.2.0"
+    "prop-types": "^15.0.0",
+    "antd": "^3.2.0",
+    "mobx": "^5.0.3",
+    "mobx-react": "^5.2.3",
+    "redux": "^4.0.0",
+    "react-redux": "^6.0.0",
+    "redux-saga": "^0.16.0",
+    "react-router-redux": "^4.0.0",
+    "axios": "^0.18.0"
+  },
+  "devDependencies": {
+    "@jwss/build": "~0.0.1"
   },
   "scripts": {
-    "start": "jws start",
-    "build": "jws build",
-    "debug": "jws start --inspect",
-    "dev": "jws start --build --watch"
+    "dev": "jwss-build --dev",
+    "build": "jwss --build"
   },
   "keywords": [
     "jws"

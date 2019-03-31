@@ -21,9 +21,9 @@ program()
     console.log("--watch", "");
     console.log("--memory", "");
   })
-  .command("new", function({ name = "jws-project", type = "react" }) {
+  .command("new", function({ name = "jws-project", lib = "react" }) {
     // 新建工程目录
-    template({ name, type });
+    template({ name, lib });
   })
   .command("start", function({ dev }) {
     // 开启server  是否watch

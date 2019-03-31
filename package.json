@@ -4,8 +4,7 @@
   "description": "- 用于创建项目 - 启动 server - 打包编译",
   "main": "index.js",
   "scripts": {
-    "bs": "lerna bootstrap",
-    "publish": "lerna publish"
+    "bs": "lerna bootstrap"
   },
   "repository": {
     "type": "git",
@@ -18,6 +17,7 @@
   },
   "homepage": "https://github.com/flyromance/jws#readme",
   "dependencies": {
+    "@jwss/template": "0.0.2",
     "lerna": "2.11.0"
   }
 }

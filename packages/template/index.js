@@ -21,7 +21,7 @@ function copyFile(from, to, options) {
       throw err;
     }
 
-    if (from.indexOf())
+    if (~from.indexOf("package.json"))
       content = content.replace(/#\{(\w+)\}/g, function($0, $1) {
         return options[$1] || "";
       });
@@ -34,7 +34,7 @@ function copyFile(from, to, options) {
   });
 }
 
-function create_project(name, type) {
+function create_project(name, lib) {
   let _cwd = path.join(cwd, name);
   mkdirp.sync(_cwd);
 
@@ -43,13 +43,14 @@ function create_project(name, type) {
     user: process.env.USER || "",
     description: "Build with jws"
   };
+
   let rename = {
     npmrc: ".npmrc",
     npmignore: ".npmignore",
     gitignore: ".gitignore"
   };
 
-  const templateDir = `${__dirname}/${type}`;
+  const templateDir = `${__dirname}/${lib}`;
   glob.sync(`${templateDir}/**/*`, { dot: true }).forEach(from => {
     const filename = from.replace(templateDir + "/", "");
     const to = path.join(_cwd, filename);
@@ -65,6 +66,6 @@ function create_project(name, type) {
   });
 }
 
-module.exports = function({ name, type }) {
-  create_project(name, type);
+module.exports = function({ name, lib }) {
+  create_project(name, lib);
 };
